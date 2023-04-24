@@ -48,12 +48,8 @@ httpService.interceptors.response.use(
       } else {
         message.info("请求错误")
       }
-    }
-    if ([200].includes(response.status)) {
-      return response.data
-    } else {
-      return response
-    }
+    } 
+    return response 
   },
   error => {
     Nprogress.done()
