@@ -5,13 +5,18 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 //导入 antd样式
 import 'antd/dist/reset.css';
-
+//导入仓库
+import store from './store/index'
+//导入redux
+import { Provider } from 'react-redux';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
+  <React.StrictMode >
+    <Provider store={store}>
+      <App />
+    </Provider> 
   </React.StrictMode>
 );
 

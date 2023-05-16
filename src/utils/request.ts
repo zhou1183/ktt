@@ -19,10 +19,10 @@ httpService.interceptors.request.use(
   (config: InternalAxiosRequestConfig<any>) => {
     config.headers = config.headers || {}
     // 在发送请求之前做些什么
-    let token = sessionStorage.getItem('token');
+    let token = sessionStorage.getItem('token'); 
     Nprogress.start()
     if (token) {
-      config.headers['Authorization'] = 'Bearer' + token
+      config.headers['Authorization'] = 'Bearer ' + token
     }
     return config
   },
